@@ -57,7 +57,7 @@ export default function Nav() {
     }
 
 
-    const [headerClass, setHeaderClass] = useState('');
+    const [headerClass, setHeaderClass] = useState('z-50');
     const [col_log, setColLog] = useState('text-red-500 text-3xl')
 
     const handleScroll = () => {
@@ -152,12 +152,16 @@ export default function Nav() {
 
     }
 
+
+
+
+
     return (
         <div className={`${haut}`}>
             <div className={`${noir} duration-200`}>
 
             </div>
-            <header className={`px-[100px] items-center duration-300 max-md:px-[20px] flex justify-between ${headerClass} py-5 ${flow}`}>
+            <header className={`px-[100px] items-center duration-300 max-md:px-[20px] flex justify-between ${headerClass} max-md:gap-5 max-md:flex-wrap py-5 ${flow}`}>
                 <div className='flex items-center gap-5'>
                     <div onClick={burger} className='cursor-pointer bug w-[40px]'
                     >
@@ -176,12 +180,13 @@ export default function Nav() {
                     </label>
                 </div>
                 <div >
-                    <div className='flex items-center gap-3 relative'>
+                    <div className='flex max-md:pl-[70px] items-center gap-3 relative'>
                         <MdOutlineAccountCircle className={`${acc} text-2xl ${col_log}`} onClick={connet} />
                         <p className='bg-red-500/80  rounded-lg text-white font-semibold absolute top-7 -left-28'>{text_log}</p>
 
-                        <p className='max-md:hidden flex  items-center'><span><BsTelephoneForward /></span> +01234567890</p>
+                        <div className=' max-md:hidden flex items-center '><span><BsTelephoneForward /></span> +01234567890</div>
                         <div onClick={log} className='cursor-pointer bg-vr text-white p-2 rounded-full '><span><MdOutlineFavoriteBorder /></span> <div className='absolute bg-white text-vr rounded-full px-2 border-2 -top-3 -right-5'>{nb}</div></div>
+
                     </div>
                 </div>
 

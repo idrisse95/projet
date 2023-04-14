@@ -88,12 +88,12 @@ export default function Acceuil() {
 
 
 
-            <div className='bg-gray-300/20 w-full max-md:flex-col max-md:gap-5 max-md:items-center  flex justify-between md:px-[100px] max-md:px-[20px] py-[100px]'>
+            <div className='bg-gray-300/20 w-full max-md:flex-col max-md:gap-5 max-md:items-center  flex justify-between md:px-[100px] max-md:px-[50px] py-[100px]'>
 
                 <div className='md:w-[49%] h-[200px] overflow-hidden shadow-xl flex'>
                     <div className='card1 rounded-s-lg h-full overflow-hidden w-[50%]'><Image src={img1} className='w-full hover:scale-125 duration-300 ease-in-out h-full' alt="" /></div>
-                    <div className='w-50% px-7 py-6 rounded-r-lg bg-white '>
-                        <p className='uppercase tracking-wider font-bold text-vr mb-3'>sale up to 15%</p>
+                    <div className='max-md:w-[70%] px-7 py-6 max-md:pt-2 rounded-r-lg bg-white '>
+                        <p className='uppercase tracking-wider max-md:mb-1 font-bold text-vr mb-3'>sale up to 15%</p>
                         <p className='text-titre text-bl text-xl font-semibold'>Innovation in Education br (Hardvocer)</p>
                         <p className='text-gray-600'>Starting at: <span className='text-vr font-semibold'>$65.09</span></p>
                     </div>
@@ -101,8 +101,8 @@ export default function Acceuil() {
 
                 <div className='md:w-[49%] h-[200px] overflow-hidden shadow-xl flex'>
                     <div className='card1 rounded-s-lg w-[50%]'><Image src={img1} className='w-full hover:scale-125 duration-300 ease-in-out h-full' alt="" /></div>
-                    <div className='w-50% px-7 py-6 rounded-r-lg bg-white '>
-                        <p className='uppercase tracking-wider font-bold text-vr mb-3'>sale up to 15%</p>
+                    <div className='max-md:w-[70%] px-7 py-6 rounded-r-lg bg-white '>
+                        <p className='uppercase tracking-wider max-md:mb-1 font-bold text-vr mb-3'>sale up to 15%</p>
                         <p className='text-titre text-bl text-xl font-semibold'>Innovation in Education br (Hardvocer)</p>
                         <p className='text-gray-600'>Starting at: <span className='text-vr font-semibold'>$65.09</span></p>
                     </div>
@@ -122,11 +122,11 @@ export default function Acceuil() {
                     <div className='w-[200px] relative h-[2px] mb-[50px] bg-vr/50'><div className='h-[15px] absolute -top-2 left-[50%] w-[15px] bg-vr/40 rotate-45'></div><div className='h-[15px] absolute -top-2 left-[45%] w-[15px] bg-vr/40 rotate-45'></div></div>
                 </div>
 
-                <div className='flex justify-center flex-wrap gap-5 max-md:gap-y-24 w-full '>
+                <div className='flex justify-center flex-wrap gap-5 max-md:gap-y-24 w-full max-sm:px-10 '>
                     {book.map((e, index) => {
                         if (index < load) {
                             return (
-                                <div className='rounded car shadow-lg animate__animated animate__animated animate__fadeIn bg-white border duration-300 relative max-md:w-[45%] w-[20%] h-[500px]' key={e.id}>
+                                <div className='rounded car shadow-lg animate__animated animate__animated animate__fadeIn bg-white border duration-300 relative max-md:w-[45%] w-[20%] h-[500px] max-sm:w-full' key={e.id}>
                                     <div className='absolute right-2 top-2 flex flex-col gap-2 text-white'>
 
                                         <i className="fa-solid fa-info bg-vr rounded-full log2 duration-300 ease-in-out opacity-0 px-3 py-1 italic"></i>
@@ -153,6 +153,9 @@ export default function Acceuil() {
                     </button>
                 </div>
             </div>
+
+                    
+
             <Footer />
         </div>
     )

@@ -6,6 +6,7 @@ import { ajout, retrait } from '../../../redux/reduce/reduxe';
 import { useRouter } from 'next/router';
 import { AiOutlineInsertRowBelow } from 'react-icons/ai';
 import { BsLayoutThreeColumns } from 'react-icons/bs';
+import Footer from '@/components/footer/Footer';
 
 
 export default function Book() {
@@ -126,10 +127,7 @@ export default function Book() {
                 if (!a.title || !b.title) return 0;
                 return b.title.localeCompare(a.title);
             });
-        } else if (value === "nl") {
-            sortedLivres = livresState.slice().sort((a, b) => b.rating - a.rating);
-        } else if (value === "nb") {
-            sortedLivres = livresState.slice().sort((a, b) => a.rating - b.rating);
+        
         } else {
             sortedLivres = book;
         }
@@ -168,29 +166,29 @@ export default function Book() {
                     <div className='mt-7'>
                         <p className='font-semibold max-md:mb-[20px] text-xl text-bl'>Category</p>
                         <div className='flex mt-4 flex-col max-md:flex-row max-md:flex-wrap gap-3'>
-                            <ul className='max-md:flex max-md:flex-wrap gap-5'>
-                                <li onClick={handleCategoryChange} data-category="All">
+                            <ul className='max-md:flex-wrap flex md:flex-col gap-4 '>
+                                <li className='cursor-pointer' onClick={handleCategoryChange} data-category="All">
                                     All
                                 </li>
-                                <li onClick={handleCategoryChange} data-category="Mystery">
+                                <li className='cursor-pointer' onClick={handleCategoryChange} data-category="Mystery">
                                     Mystery
                                 </li>
-                                <li onClick={handleCategoryChange} data-category="Fantasy">
+                                <li className='cursor-pointer' onClick={handleCategoryChange} data-category="Fantasy">
                                     Fantasy
                                 </li>
-                                <li onClick={handleCategoryChange} data-category="Biography">
+                                <li className='cursor-pointer' onClick={handleCategoryChange} data-category="Biography">
                                     Biography
                                 </li>
-                                <li onClick={handleCategoryChange} data-category="Religion">
+                                <li className='cursor-pointer' onClick={handleCategoryChange} data-category="Religion">
                                     Religion
                                 </li>
-                                <li onClick={handleCategoryChange} data-category="Fiction">
+                                <li className='cursor-pointer' onClick={handleCategoryChange} data-category="Fiction">
                                     Fiction
                                 </li>
-                                <li onClick={handleCategoryChange} data-category="Historical">
+                                <li className='cursor-pointer' onClick={handleCategoryChange} data-category="Historical">
                                     Historical
                                 </li>
-                                <li onClick={handleCategoryChange} data-category="Inspirational">
+                                <li className='cursor-pointer' onClick={handleCategoryChange} data-category="Inspirational">
                                     Inspirational
                                 </li>
                             </ul>
@@ -233,8 +231,7 @@ export default function Book() {
                                 <option value="">Trier par</option>
                                 <option value="az">Titre A-Z</option>
                                 <option value="za">Titre Z-A</option>
-                                <option value="nl">Note élevé</option>
-                                <option value="nb">Note basse</option>
+                               
                             </select>
                         </div>
 
@@ -276,7 +273,7 @@ export default function Book() {
                 </div>
 
             </div>
-
+            <Footer />
 
         </div>
     );

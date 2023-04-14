@@ -9,7 +9,7 @@ export default function Footer() {
         <div className={styles.bigFooter} >
             <div className={styles.footer}>
                 <div className={styles.book}>
-                    <BsStack className={styles.iconFoot}/>
+                    <BsStack className=''/>
                     <div>
                         <h6>Book Information?</h6>
                         <p>Please send us email at support@gmail.com</p>
